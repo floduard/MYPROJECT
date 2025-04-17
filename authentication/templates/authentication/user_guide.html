@@ -1,0 +1,105 @@
+{% extends 'authentication/base.html' %}
+{% block title %}User Guide{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto bg-white p-8 rounded shadow mt-20 text-gray-800">
+  <h1 class="text-3xl font-bold mb-6 text-blue-500">📘 User Guide</h1>
+
+  <!-- Registration -->
+  <section class="mb-6">
+    <h2 class="text-xl font-semibold mb-2">1. Registration</h2>
+    <p>Click on <strong>Register</strong> from the login page. Provide your username, email, password, and complete the CAPTCHA. You'll receive an OTP for verification.</p>
+  </section>
+
+  <!-- Login -->
+  <section class="mb-6">
+    <h2 class="text-xl font-semibold mb-2">2. Login</h2>
+    <p>Enter your username and password, solve the CAPTCHA, and verify with OTP if MFA is enabled.</p>
+  </section>
+
+  <!-- OTP -->
+  <section class="mb-6">
+    <h2 class="text-xl font-semibold mb-2">3. OTP Verification</h2>
+    <p>After login, input the 6-digit OTP sent via your selected method (Email, SMS, or Authenticator App). You may choose to remember your device.</p>
+  </section>
+
+  <!-- Profile -->
+  <section class="mb-6">
+    <h2 class="text-xl font-semibold mb-2">4. Profile Management</h2>
+    <p>In the <strong>Profile</strong> tab, you can change your username, email, or password.</p>
+  </section>
+
+  <!-- MFA Setup -->
+  <section class="mb-6">
+    <h2 class="text-xl font-semibold mb-2">5. Managing MFA (Multi-Factor Authentication)</h2>
+
+    <h3 class="text-lg font-medium mt-3">🛡️ Enable MFA</h3>
+    <ol class="list-decimal ml-6 mb-3 space-y-1">
+      <li>Go to the <strong>Settings</strong> page.</li>
+      <li>Select your preferred method under <strong>“Select MFA Method”</strong>:
+        <ul class="list-disc ml-5 text-sm">
+          <li><strong>Email</strong>: OTP is sent to your email.</li>
+          <li><strong>SMS</strong>: OTP is sent to your phone number.</li>
+          <li><strong>TOTP</strong>: Use Google Authenticator or similar app.</li>
+        </ul>
+      </li>
+      <li>Click <strong>“Enable MFA”</strong>.</li>
+    </ol>
+
+    <h3 class="text-lg font-medium mt-3">🚫 Disable MFA</h3>
+    <p>If MFA is enabled and you want to disable it:</p>
+    <ol class="list-decimal ml-6 space-y-1">
+      <li>Go to <strong>Settings</strong>.</li>
+      <li>Click the red <strong>“Disable MFA”</strong> button.</li>
+    </ol>
+  </section>
+
+  <!-- Phone Number -->
+  <section class="mb-6">
+    <h2 class="text-xl font-semibold mb-2">6. Update Phone Number</h2>
+    <ol class="list-decimal ml-6 space-y-1">
+      <li>Go to <strong>Settings</strong>.</li>
+      <li>Find the <strong>“Update Phone Number”</strong> section.</li>
+      <li>Enter your new number and click <strong>“Update Phone Number”</strong>.</li>
+    </ol>
+    <p class="text-sm text-gray-600 mt-1">Ensure your number is valid to receive OTPs via SMS.</p>
+  </section>
+
+  <!-- Email -->
+  <section class="mb-6">
+    <h2 class="text-xl font-semibold mb-2">7. Update and Verify Email</h2>
+
+    <h3 class="font-medium">✉️ Update Email</h3>
+    <ol class="list-decimal ml-6 space-y-1">
+      <li>Go to <strong>Settings</strong>.</li>
+      <li>Find the <strong>“Email Management”</strong> section.</li>
+      <li>Enter your new email address and click <strong>“Update Email”</strong>.</li>
+    </ol>
+
+    <h3 class="font-medium mt-3">✅ Verify Email</h3>
+    <ol class="list-decimal ml-6 space-y-1">
+      <li>Click the <strong>“Verify Email”</strong> button.</li>
+      <li>Check your inbox for a verification message.</li>
+      <li>Click the verification link to complete the process.</li>
+    </ol>
+  </section>
+
+  <!-- Security -->
+  <section class="mb-6">
+    <h2 class="text-xl font-semibold mb-2">8. Security Features</h2>
+    <ul class="list-disc ml-6 space-y-1">
+      <li><strong>MFA:</strong> Adds an extra layer of protection with OTPs.</li>
+      <li><strong>CAPTCHA:</strong> Prevents bot logins during registration/login.</li>
+      <li><strong>Email & SMS Verification:</strong> Confirms authenticity of your contact details.</li>
+    </ul>
+  </section>
+
+  <!-- Help -->
+  <section class="mt-10 border-t pt-4">
+    <p class="text-sm text-gray-500">
+      Need help? Contact support at 
+      <a href="mailto:support@example.com" class="text-blue-600 underline">mfasupport2025@yahoo.com</a>.
+    </p>
+  </section>
+</div>
+{% endblock %}

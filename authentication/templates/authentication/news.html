@@ -1,0 +1,90 @@
+{% extends 'authentication/base.html' %}
+{% block title %}Multi-Factor Authentication (MFA){% endblock %}
+
+{% block content %}
+<div class="max-w-5xl mx-auto bg-white p-10 rounded-lg shadow-lg mt-10 text-gray-800">
+  <h1 class="text-4xl font-bold text-blue-700 mb-6 border-b pb-2">🔐 Multi-Factor Authentication (MFA)</h1>
+
+  <section class="mb-8">
+    <h2 class="text-2xl font-semibold mb-2">1. What is MFA?</h2>
+    <p>
+      Multi-Factor Authentication (MFA) is a security mechanism that requires users to provide two or more verification factors to access a resource such as an application, online account, or VPN. It enhances security by combining multiple credentials, making it significantly harder for unauthorized users to gain access.
+    </p>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-2xl font-semibold mb-2">2. Types of Authentication Factors</h2>
+    <ul class="list-disc ml-6 space-y-1">
+      <li><strong>Something You Know:</strong> Passwords, PINs, or security questions.</li>
+      <li><strong>Something You Have:</strong> OTP tokens, mobile phones, smart cards.</li>
+      <li><strong>Something You Are:</strong> Biometrics such as fingerprints, facial recognition, retina scans.</li>
+      <li><strong>Somewhere You Are:</strong> Based on geolocation or IP address.</li>
+    </ul>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-2xl font-semibold mb-2">3. How MFA Works</h2>
+    <p>
+      Upon login, a user first enters a username and password. The system then requires an additional authentication factor, like a time-sensitive code from a mobile app. Access is granted only if all verification methods are correct.
+    </p>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-2xl font-semibold mb-2">4. Real-World Use Cases</h2>
+    <ul class="list-disc ml-6 space-y-1">
+      <li><strong>Email Providers:</strong> Gmail uses OTP apps and security prompts.</li>
+      <li><strong>Banking:</strong> Requires SMS OTPs and biometric confirmation.</li>
+      <li><strong>Enterprise:</strong> Remote VPNs and corporate tools require smart cards or YubiKeys.</li>
+    </ul>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-2xl font-semibold mb-2">5. Industry Adoption</h2>
+    <p>
+      MFA is now standard in high-security industries such as finance, healthcare, defense, and education. Institutions are integrating MFA to align with global compliance standards and protect sensitive data.
+    </p>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-2xl font-semibold mb-2">6. Regulatory Compliance</h2>
+    <ul class="list-disc ml-6 space-y-1">
+      <li><strong>GDPR (EU):</strong> Recommends multi-layered access control.</li>
+      <li><strong>HIPAA (USA):</strong> Requires healthcare systems to use secure logins.</li>
+      <li><strong>PCI-DSS:</strong> Mandates MFA for accessing cardholder environments.</li>
+    </ul>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-2xl font-semibold mb-2">7. Challenges</h2>
+    <ul class="list-disc ml-6 space-y-1">
+      <li><strong>User Inconvenience:</strong> Adds extra steps to login processes.</li>
+      <li><strong>Device Dependency:</strong> Losing your device can lock you out.</li>
+      <li><strong>Security Loopholes:</strong> MFA can be bypassed using phishing or SIM swapping.</li>
+    </ul>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-2xl font-semibold mb-2">8. The Future of MFA</h2>
+    <p>
+      MFA is evolving toward passwordless authentication using FIDO2 standards, biometrics, and hardware-based security keys. Artificial Intelligence (AI) is also being used to analyze behavioral patterns for continuous authentication.
+    </p>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-2xl font-semibold mb-2">9. Conclusion</h2>
+    <p>
+      MFA is a critical defense in today’s cybersecurity landscape. By combining multiple factors, organizations and individuals can significantly reduce the risk of breaches, identity theft, and data loss.
+    </p>
+  </section>
+
+  <section class="mt-10 pt-6 border-t">
+    <h2 class="text-xl font-semibold mb-2">📚 References</h2>
+    <ul class="list-decimal ml-6 space-y-1 text-sm text-gray-700">
+      <li>NIST. (2017). <em>Digital Identity Guidelines</em> [NIST SP 800-63-3]. Retrieved from https://pages.nist.gov/800-63-3/</li>
+      <li>Microsoft Docs. (2023). <em>What is Multi-Factor Authentication?</em> Retrieved from https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks</li>
+      <li>OWASP. (2023). <em>Multi-Factor Authentication Cheat Sheet</em>. https://cheatsheetseries.owasp.org/cheatsheets/Multi-Factor_Authentication_Cheat_Sheet.html</li>
+      <li>Google Security Blog. (2022). <em>The State of MFA</em>. Retrieved from https://security.googleblog.com</li>
+    </ul>
+  </section>
+</div>
+{% endblock %}
