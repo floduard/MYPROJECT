@@ -22,3 +22,7 @@ python manage.py createsuperuser
 
 # 7. Run the development server
 python manage.py runserver
+
+
+# below is attached video detailing  how application works
+
