@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-tzth%_07u48dt%rv=xpw80w9z(&fwu9__j25ze1fs6zxk7=&5u'
+SECRET_KEY = secret_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -46,8 +46,8 @@ INSTALLED_APPS = [
     
 ]
 
-RECAPTCHA_PUBLIC_KEY = '6LfnhhsrAAAAAL_I76lI9HKJjiyLVnOS0xhf_AEO'
-RECAPTCHA_PRIVATE_KEY = '6LfnhhsrAAAAAHYYgnEh9RLnkDdK7SfvXazYQ9hR'
+RECAPTCHA_PUBLIC_KEY = recaptcha_public_key
+RECAPTCHA_PRIVATE_KEY = recaptcha_private_key
 RECAPTCHA_REQUIRED_SCORE = 0.85  # Optional for v3
 
 MIDDLEWARE = [
@@ -138,8 +138,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'flodouard2000@gmail.com'
-EMAIL_HOST_PASSWORD = 'myhf gvcp pvmo sxys'
+EMAIL_HOST_USER = sender_email
+EMAIL_HOST_PASSWORD = sender_password
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'  # or any named URL you prefer
